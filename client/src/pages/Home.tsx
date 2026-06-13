@@ -352,7 +352,7 @@ function ProductCard({
       <div className="relative overflow-hidden aspect-[4/5]">
         <img
           src={product.image}
-          alt={product.title}
+          alt={productName}
           loading="lazy"
           decoding="async"
           style={{ objectPosition: product.imagePosition }}
@@ -371,7 +371,7 @@ function ProductCard({
         </div>
       </div>
       <CardContent className="p-6">
-        <h3 className="text-xl tracking-[-0.04em] text-[#111111]">{product.title}</h3>
+        <h3 className="text-xl tracking-[-0.04em] text-[#111111]">{productName}</h3>
         <p className="mt-2 inline-flex rounded-full border border-[#d4af37]/18 bg-[#fbf8f2] px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-[#8a6f31]">
           Código: {productCode}
         </p>
