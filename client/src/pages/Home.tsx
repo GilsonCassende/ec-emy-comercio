@@ -67,7 +67,7 @@ type FaqItem = {
 
 const logoImage = "/brand/ec-emy-logo.webp";
 const heroImage = "/products/20-vestido-verde-modelo.webp";
-const heroAccentImage = "/products/31-vestido-branco-manequins.webp";
+const heroAccentImage = "/products/31-vestido-curto-transpassado.webp";
 const aboutImage = "/products/24-vestidos-manequins-coloridos.webp";
 const ctaImage = "/products/02-vestidos-mix-color.webp";
 const accessoriesImage = "/products/29-bolsas-shelf.webp";
