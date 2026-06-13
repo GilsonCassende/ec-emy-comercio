@@ -337,7 +337,10 @@ function ProductCard({
   variant?: "default" | "highlight";
 }) {
   const isHighlight = variant === "highlight";
-  const catalogProduct = catalogProducts.find((item) => item.name === product.title);
+  const catalogProduct = catalogProducts.find((item) => item.image === product.image);
+  const productName = catalogProduct?.name ?? product.title;
+  const productCategory = catalogProduct?.category ?? product.category;
+  const productCode = catalogProduct?.code ?? "N/A";
 
   return (
     <Card
@@ -363,14 +366,14 @@ function ProductCard({
         </div>
         <div className="absolute bottom-5 left-5 right-5">
           <div className="inline-flex items-center gap-2 rounded-full bg-black/45 px-3 py-1 text-xs tracking-[0.16em] text-white/90 backdrop-blur-md">
-            {product.category}
+            {productCategory}
           </div>
         </div>
       </div>
       <CardContent className="p-6">
         <h3 className="text-xl tracking-[-0.04em] text-[#111111]">{product.title}</h3>
         <p className="mt-2 inline-flex rounded-full border border-[#d4af37]/18 bg-[#fbf8f2] px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-[#8a6f31]">
-          Código: {catalogProduct?.code ?? "N/A"}
+          Código: {productCode}
         </p>
         <p className="mt-3 text-sm leading-7 text-[#5d5548]">{product.description}</p>
         <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between lg:gap-6">
@@ -387,9 +390,9 @@ function ProductCard({
           >
             <a
               href={buildProductWhatsAppLink({
-                productName: product.title,
-                productCode: catalogProduct?.code ?? "N/A",
-                category: product.category,
+                productName,
+                productCode,
+                category: productCategory,
               })}
               target="_blank"
               rel="noreferrer"
