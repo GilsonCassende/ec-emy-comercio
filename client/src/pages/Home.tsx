@@ -554,7 +554,7 @@ function Home() {
                     className="h-12 w-full rounded-full bg-[#111111] text-white hover:bg-[#1f1f1f]"
                   >
                     <a href={buildWhatsAppLink(defaultWhatsappMessage)} target="_blank" rel="noreferrer">
-                      Pedir atendimento no WhatsApp
+                      Atendimento no WhatsApp
                       <MessageCircle className="h-4 w-4" />
                     </a>
                   </Button>
@@ -563,7 +563,7 @@ function Home() {
                   variant="outline"
                   className="h-12 w-full rounded-full border-black/10 bg-white hover:bg-white"
                 >
-                  <Link href="/produtos">Ver catálogo completo</Link>
+                  <Link href="/produtos">Catálogo completo</Link>
                 </Button>
               </SheetFooter>
               </div>
@@ -734,7 +734,7 @@ function Home() {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            Consultar disponibilidade
+                            Ver disponibilidade
                           </a>
                         </Button>
                       </div>

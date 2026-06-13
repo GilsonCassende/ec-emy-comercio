@@ -93,7 +93,7 @@ function ProductCard({ product }: { product: CatalogProduct }) {
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap"
             >
-              Consultar disponibilidade
+              Ver disponibilidade
               <MessageCircle className="h-4 w-4" />
             </a>
           </Button>
