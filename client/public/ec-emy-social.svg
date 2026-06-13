@@ -1,6 +1,6 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">EC EMY COMÉRCIO | Boutique feminina premium</title>
-  <desc id="desc">Imagem social com identidade premium da EC EMY COMÉRCIO.</desc>
+  <title id="title">EC EMY COMÉRCIO | Moda feminina no WhatsApp</title>
+  <desc id="desc">Imagem social da EC EMY COMÉRCIO com atendimento personalizado e compra pelo WhatsApp.</desc>
   <defs>
     <linearGradient id="bg" x1="113" y1="74" x2="1060" y2="580" gradientUnits="userSpaceOnUse">
       <stop stop-color="#F6EFE5"/>
@@ -20,11 +20,11 @@
   <circle cx="218" cy="183" r="49" fill="#111111"/>
   <path d="M197 171H210.5C214.642 171 218 174.358 218 178.5V178.5C218 181.538 215.538 184 212.5 184H197V171Z" stroke="#FBF8F2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M197 184H212.5C216.642 184 220 187.358 220 191.5V191.5C220 195.642 216.642 199 212.5 199H197V184Z" stroke="#FBF8F2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="300" y="168" fill="#D9B55B" font-family="Arial, sans-serif" font-size="20" letter-spacing="0.45em">BOUTIQUE FEMININA PREMIUM</text>
+  <text x="300" y="168" fill="#D9B55B" font-family="Arial, sans-serif" font-size="20" letter-spacing="0.45em">MODA FEMININA NO WHATSAPP</text>
   <text x="300" y="250" fill="#FBF8F2" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="600" letter-spacing="-0.04em">EC EMY COMÉRCIO</text>
-  <text x="300" y="324" fill="#E9D9BF" font-family="Arial, sans-serif" font-size="31" letter-spacing="0.02em">Moda feminina selecionada com atendimento pelo WhatsApp</text>
+  <text x="300" y="324" fill="#E9D9BF" font-family="Arial, sans-serif" font-size="31" letter-spacing="0.02em">Moda feminina seleccionada com apoio directo no WhatsApp</text>
   <rect x="300" y="384" width="306" height="64" rx="32" fill="#FBF8F2"/>
-  <text x="350" y="426" fill="#111111" font-family="Arial, sans-serif" font-size="24" font-weight="700">Boutique premium</text>
+  <text x="350" y="426" fill="#111111" font-family="Arial, sans-serif" font-size="24" font-weight="700">Atendimento personalizado</text>
   <rect x="300" y="468" width="378" height="4" rx="2" fill="#D9B55B"/>
   <text x="300" y="524" fill="#E9D9BF" font-family="Arial, sans-serif" font-size="20" letter-spacing="0.28em">ROUPAS  •  BOLSAS  •  ACESSÓRIOS  •  CALÇADOS</text>
 </svg>

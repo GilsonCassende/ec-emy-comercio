@@ -31,7 +31,7 @@ export default function NotFound() {
                 </h1>
                 <p className="mt-4 text-sm leading-7 text-white/72">
                   A página que procuras não existe ou foi movida. Vamos voltar
-                  para a boutique.
+                  para a página inicial.
                 </p>
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function NotFound() {
                 </h2>
 
                 <p className="mt-4 max-w-lg text-base leading-8 text-[#5d5548]">
-                  Se chegaste aqui por engano, regressa à homepage ou fala com a
+                  Se chegaste aqui por engano, regressa à página inicial ou fala com a
                   equipa pelo WhatsApp para continuares a experiência sem fricção.
                 </p>
 
@@ -58,18 +58,18 @@ export default function NotFound() {
                     className="h-12 rounded-full bg-[#111111] px-6 text-base text-white hover:bg-[#1f1f1f]"
                   >
                     <ArrowLeft className="h-4 w-4" />
-                    Voltar à homepage
+                    Voltar à página inicial
                   </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="h-12 rounded-full border-black/10 bg-white px-6 text-base text-[#111111] hover:bg-[#fbf8f2]"
-                >
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="h-12 rounded-full border-black/10 bg-white px-6 text-base text-[#111111] hover:bg-[#fbf8f2]"
+                  >
                     <a href={buildWhatsAppLink(defaultWhatsappMessage)} target="_blank" rel="noreferrer">
                       <MessageCircle className="h-4 w-4" />
-                      Falar no WhatsApp
+                      Pedir atendimento no WhatsApp
                     </a>
-                </Button>
+                  </Button>
                 </div>
               </div>
             </CardContent>

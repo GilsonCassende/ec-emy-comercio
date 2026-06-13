@@ -79,7 +79,7 @@ function ProductCard({ product }: { product: CatalogProduct }) {
           Código: {product.code}
         </p>
         <p className="mt-3 text-sm leading-7 text-[#61584c]">
-          Curadoria pensada para uma boutique feminina com leitura elegante, pronta para compra pelo WhatsApp.
+          Curadoria pensada para uma boutique feminina com peças fáceis de confirmar e comprar pelo WhatsApp.
         </p>
         <div className="mt-5 flex items-center gap-3">
           <Button asChild className="h-11 flex-1 rounded-full bg-[#111111] px-5 text-sm text-white hover:bg-[#1f1f1f]">
@@ -93,7 +93,7 @@ function ProductCard({ product }: { product: CatalogProduct }) {
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap"
             >
-              WhatsApp
+              Consultar disponibilidade
               <MessageCircle className="h-4 w-4" />
             </a>
           </Button>
@@ -110,19 +110,19 @@ function CatalogHero() {
       <div className="container relative grid gap-10 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-20">
         <div className="max-w-2xl">
           <Badge className="rounded-full bg-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.28em] text-white">
-            Catálogo premium
+            Catálogo completo
           </Badge>
           <h1 className="mt-5 text-balance text-4xl leading-[0.95] tracking-[-0.06em] sm:text-5xl md:text-6xl">
-            Nossa Coleção
+            Peças prontas para consultar no WhatsApp.
           </h1>
           <p className="mt-5 max-w-xl text-base leading-8 text-white/80 md:text-lg">
-            Descubra peças selecionadas para mulheres que valorizam elegância, estilo e exclusividade.
+            Descubra peças femininas, confirme disponibilidade e fale com a equipa no WhatsApp para fechar a compra com segurança.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button asChild className="h-12 rounded-full bg-white px-6 text-base text-[#111111] hover:bg-white/90">
               <a href={buildWhatsAppLink(defaultWhatsappMessage)} target="_blank" rel="noreferrer">
-                Falar no WhatsApp
+                Pedir atendimento no WhatsApp
                 <MessageCircle className="h-4 w-4" />
               </a>
             </Button>
@@ -139,7 +139,7 @@ function CatalogHero() {
             {[
               `${catalogProducts.length} produtos`,
               "Curadoria real",
-              "WhatsApp direto",
+              "Resposta no WhatsApp",
             ].map((item) => (
               <div key={item} className="rounded-full border border-white/12 bg-white/6 px-4 py-2 text-sm text-white/82 backdrop-blur-sm">
                 {item}
@@ -214,7 +214,7 @@ export default function Products() {
   useSeo({
     title: "Produtos | EC EMY COMÉRCIO",
     description:
-      "Conheça toda a coleção da EC EMY COMÉRCIO. Moda feminina, bolsas, calçados e acessórios selecionados com elegância.",
+      "Conheça toda a coleção da EC EMY COMÉRCIO. Moda feminina, bolsas, calçados e acessórios com atendimento personalizado no WhatsApp.",
     canonicalPath: `${window.location.origin}/produtos`,
     image: `${window.location.origin}/brand/ec-emy-social.webp`,
   });
@@ -260,7 +260,7 @@ export default function Products() {
             </Button>
             <Button asChild className="h-11 rounded-full bg-[#111111] px-5 text-white hover:bg-[#1f1f1f]">
               <a href={buildWhatsAppLink(defaultWhatsappMessage)} target="_blank" rel="noreferrer">
-                WhatsApp
+                Pedir atendimento no WhatsApp
                 <MessageCircle className="h-4 w-4" />
               </a>
             </Button>

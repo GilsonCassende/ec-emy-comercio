@@ -1,8 +1,12 @@
 export const whatsappNumber = "244937770235";
+export const whatsappDisplayNumber = "+244 937 770 235";
+export const whatsappSupportHours = "7h às 23h";
 
 export const defaultWhatsappMessage = `Olá, tudo bem?
 
-Gostaria de receber mais informações sobre os produtos disponíveis.
+Gostaria de receber atendimento sobre as peças disponíveis.
+
+Queria confirmar disponibilidade, tamanhos, preço e entrega.
 
 Aguardo o seu atendimento.
 
@@ -33,12 +37,14 @@ Tenho interesse no seguinte produto da EC EMY COMÉRCIO:
 
 📂 Categoria: ${category}
 
-Gostaria de receber informações sobre:
+Gostaria de confirmar:
 
 • Disponibilidade
 • Tamanhos disponíveis
 • Cores disponíveis
 • Preço
+• Possibilidade de reserva
+• Entrega
 
 Aguardo o seu atendimento.
 

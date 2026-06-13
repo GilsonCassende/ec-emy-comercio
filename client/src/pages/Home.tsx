@@ -33,6 +33,8 @@ import {
   buildProductWhatsAppLink,
   buildWhatsAppLink,
   defaultWhatsappMessage,
+  whatsappDisplayNumber,
+  whatsappSupportHours,
 } from "@/lib/site";
 import { catalogProducts } from "@/data/products";
 
@@ -87,52 +89,52 @@ const trustItems = [
   {
     icon: ShieldCheck,
     title: "Atendimento confiável",
-    description: "Compra assistida com resposta rápida no WhatsApp.",
+    description: "Resposta rápida no WhatsApp para tirar dúvidas e orientar a compra.",
   },
   {
     icon: Gem,
-    title: "Curadoria premium",
-    description: "Peças selecionadas para uma imagem mais elegante.",
+    title: "Seleção atualizada",
+    description: "Peças escolhidas com foco em uso real, boa apresentação e variedade.",
   },
   {
     icon: Truck,
     title: "Entrega e orientação",
-    description: "Suporte claro para escolher, pedir e receber.",
+    description: "Apoio claro da escolha até à entrega.",
   },
   {
     icon: Clock3,
     title: "Novidades frequentes",
-    description: "Coleção viva com peças novas e destaques semanais.",
+    description: "Novas entradas e destaques para manter o catálogo sempre activo.",
   },
 ];
 
 const collections: Collection[] = [
   {
     title: "Conjunto off-white",
-    description: "Peça estruturada para um visual elegante e muito vendável.",
+    description: "Peça estruturada para compor looks de trabalho ou saída com facilidade.",
     image: "/products/01-conjunto-vest-ivory.webp",
-    accent: "Selecionado para uso diário",
+    accent: "Para o dia a dia",
     imagePosition: "center 28%",
   },
   {
     title: "Vestido branco",
-    description: "Peça com presença leve, ideal para ocasiões especiais.",
+    description: "Peça leve para eventos, encontros e momentos especiais.",
     image: heroAccentImage,
-    accent: "Mais sofisticado",
+    accent: "Mais pedido",
     imagePosition: "center 34%",
   },
   {
     title: "Bolsas estruturadas",
-    description: "Acessórios que completam o look com acabamento refinado.",
+    description: "Acessórios que ajudam a fechar o look com mais segurança.",
     image: accessoriesImage,
-    accent: "Acabamento refinado",
+    accent: "Acabamento cuidado",
     imagePosition: "center 52%",
   },
   {
     title: "Sandália com detalhe",
-    description: "Calçado versátil para finalizar a produção com estilo.",
+    description: "Modelo versátil para complementar a produção com conforto.",
     image: "/products/30-sandalia-detalhe.webp",
-    accent: "Toque final da produção",
+    accent: "Combina com vários looks",
     imagePosition: "center 56%",
   },
 ];
@@ -141,26 +143,26 @@ const weeklyHighlights: Product[] = [
   {
     title: "Conjunto alfaiataria bege",
     category: "Conjuntos",
-    description: "Uma composição elegante e refinada, ideal para uma imagem boutique.",
+    description: "Modelo prático para quem quer vestir bem sem perder tempo na escolha.",
     badge: "Destaque da semana",
     price: "Sob consulta",
     image: "/products/13-conjunto-bege-alfaiataria-2.webp",
     imagePosition: "center 34%",
   },
   {
-    title: "Vestido verde elegante",
+    title: "Vestido verde com presença",
     category: "Vestidos",
-    description: "Uma peça clássica com presença sofisticada e leitura premium.",
+    description: "Peça com boa presença visual e fácil de adaptar a várias ocasiões.",
     badge: "Mais procurado",
     price: "Sob consulta",
     image: "/products/26-vestido-verde-elite.webp",
     imagePosition: "center 36%",
   },
   {
-    title: "Vestido branco elegante",
+    title: "Vestido branco de corte leve",
     category: "Vestidos",
-    description: "Visual limpo, delicado e muito elegante para a homepage.",
-    badge: "Mais elegante",
+    description: "Visual limpo, delicado e fácil de apresentar na página inicial.",
+    badge: "Mais pedido",
     price: "Sob consulta",
     image: "/products/31-vestido-curto-transpassado.webp",
     imagePosition: "center 34%",
@@ -171,7 +173,7 @@ const featuredProducts: Product[] = [
   {
     title: "Blazer bege",
     category: "Conjuntos",
-    description: "Corte elegante, presença feminina e leitura visual premium.",
+    description: "Corte limpo, fácil de combinar e com bom impacto visual.",
     badge: "Peça assinatura",
     price: "Sob consulta",
     image: "/products/14-blazer-bege.webp",
@@ -180,7 +182,7 @@ const featuredProducts: Product[] = [
   {
     title: "Camisa listrada",
     category: "Blusas",
-    description: "Um clássico fácil de vender, com leitura limpa e versátil.",
+    description: "Uma peça versátil para trabalho e dia a dia.",
     badge: "Mais pedida",
     price: "Sob consulta",
     image: "/products/06-blusa-listras-azul.webp",
@@ -189,7 +191,7 @@ const featuredProducts: Product[] = [
   {
     title: "Camisas listradas",
     category: "Blusas",
-    description: "Versátil para usar em mais de uma ocasião com conforto.",
+    description: "Peça leve para combinar com calças, saias ou conjuntos.",
     badge: "Novo",
     price: "Sob consulta",
     image: "/products/23-blusa-branca.webp",
@@ -198,7 +200,7 @@ const featuredProducts: Product[] = [
   {
     title: "Sandálias rasteiras",
     category: "Sandálias",
-    description: "Detalhes discretos que deixam a produção mais completa.",
+    description: "Modelo confortável para completar a produção com leveza.",
     badge: "Selecionado",
     price: "Sob consulta",
     image: "/products/32-sandalias-pilha.webp",
@@ -209,15 +211,15 @@ const featuredProducts: Product[] = [
 const reasons = [
   {
     icon: Heart,
-    title: "Curadoria com gosto",
+    title: "Atendimento personalizado",
   },
   {
     icon: Sparkles,
-    title: "Imagem premium",
+    title: "Seleção com critério",
   },
   {
     icon: Users,
-    title: "Atendimento humano",
+    title: "Resposta rápida",
   },
   {
     icon: BadgeCheck,
@@ -230,47 +232,57 @@ const testimonials: Testimonial[] = [
     name: "Mariana S.",
     city: "Luanda",
     quote:
-      "Achei o atendimento muito rápido e as peças chegam com uma apresentação impecável. Dá mesmo vontade de comprar.",
+      "O atendimento foi rápido e ajudou-me a confirmar tudo antes de comprar. Passei confiança logo no primeiro contacto.",
   },
   {
     name: "Débora A.",
     city: "Benguela",
     quote:
-      "A marca transmite confiança. O site parece boutique de verdade, e isso ajudou-me a decidir sem hesitar.",
+      "Gostei da forma clara como explicam disponibilidade, tamanho e entrega. Fiquei segura para avançar.",
   },
   {
     name: "Renata M.",
     city: "Huambo",
     quote:
-      "Gostei da elegância da apresentação e do cuidado no WhatsApp. Fiquei com sensação de exclusividade.",
+      "A equipa respondeu com atenção e deu-me as informações certas para escolher a peça sem dúvida.",
   },
 ];
 
 const faqItems: FaqItem[] = [
   {
-    question: "Como faço um pedido?",
+    question: "Como comprar?",
     answer:
-      "Basta clicar em qualquer CTA de WhatsApp e enviar a mensagem. A equipa responde com orientação personalizada.",
+      "Toque em \"Pedir atendimento no WhatsApp\", envie a peça que procura e a equipa confirma a disponibilidade, o preço e os próximos passos.",
   },
   {
-    question: "Vocês enviam fotos e detalhes das peças?",
+    question: "Quais são as formas de pagamento?",
     answer:
-      "Sim. O atendimento pelo WhatsApp serve exatamente para esclarecer tamanho, acabamento e disponibilidade.",
+      "As formas de pagamento são confirmadas no WhatsApp antes de fechar a compra, para garantir que recebe a orientação certa no momento.",
   },
   {
-    question: "Fazem entrega?",
+    question: "Fazem entregas?",
     answer:
-      "A entrega pode ser combinada diretamente no WhatsApp, de acordo com a localização e a disponibilidade.",
+      "Sim. A entrega é combinada caso a caso, conforme a zona e a disponibilidade da peça. A equipa informa o prazo e o valor antes do envio.",
   },
   {
-    question: "Os produtos têm tamanhos variados?",
+    question: "Como funcionam as trocas?",
     answer:
-      "As opções variam conforme a peça. O ideal é falar com a equipa para receber orientação mais precisa.",
+      "As trocas são avaliadas conforme o estado da peça e o motivo da solicitação. O ideal é confirmar tudo no WhatsApp antes da entrega.",
   },
   {
-    question: "Posso ver novidades da semana?",
+    question: "Quanto tempo demoram a responder no WhatsApp?",
     answer:
-      "Sim. A secção de destaques e novidades foi pensada para mostrar rapidamente o que está mais atual na boutique.",
+      "O tempo de resposta costuma ser rápido dentro do horário de atendimento, das 7h às 23h. Fora desse período, a equipa responde assim que abrir.",
+  },
+  {
+    question: "Os produtos estão sempre disponíveis?",
+    answer:
+      "A disponibilidade pode mudar rapidamente. Por isso, o ideal é confirmar sempre no WhatsApp antes de finalizar.",
+  },
+  {
+    question: "Posso reservar uma peça?",
+    answer:
+      "Sim, algumas peças podem ser reservadas por um curto período, mediante confirmação no WhatsApp.",
   },
 ];
 
@@ -398,7 +410,7 @@ function ProductCard({
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap"
             >
-              Pedir no WhatsApp
+              Consultar disponibilidade
               <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
@@ -542,7 +554,7 @@ function Home() {
                     className="h-12 w-full rounded-full bg-[#111111] text-white hover:bg-[#1f1f1f]"
                   >
                     <a href={buildWhatsAppLink(defaultWhatsappMessage)} target="_blank" rel="noreferrer">
-                      Falar no WhatsApp
+                      Pedir atendimento no WhatsApp
                       <MessageCircle className="h-4 w-4" />
                     </a>
                   </Button>
@@ -551,7 +563,7 @@ function Home() {
                   variant="outline"
                   className="h-12 w-full rounded-full border-black/10 bg-white hover:bg-white"
                 >
-                  <Link href="/produtos">Ver catálogo</Link>
+                  <Link href="/produtos">Ver catálogo completo</Link>
                 </Button>
               </SheetFooter>
               </div>
@@ -573,23 +585,23 @@ function Home() {
                 variant="outline"
                 className="rounded-full border-[#d4af37]/25 bg-white/80 px-3 py-1 text-[11px] uppercase tracking-[0.28em] text-[#8a6f31]"
               >
-                Boutique feminina premium
+                Moda feminina de Angola
               </Badge>
 
               <h1 className="mt-5 text-balance text-3xl leading-[0.98] tracking-[-0.05em] text-[#111111] sm:max-w-2xl sm:text-5xl md:text-6xl lg:max-w-none lg:text-7xl">
-                Moda feminina selecionada para parecer elegante sem esforço.
+                Moda feminina com atendimento personalizado e compra segura no WhatsApp.
               </h1>
 
               <p className="mt-6 max-w-xl text-base leading-8 text-[#5d5548] md:text-lg">
-                A EC EMY COMÉRCIO apresenta uma curadoria feminina com roupas,
-                bolsas, acessórios e calçados pensados para elevar o look e
-                conduzir a cliente para uma compra mais segura pelo WhatsApp.
+                A EC EMY COMÉRCIO apresenta moda feminina, bolsas, acessórios e
+                calçados com apoio directo da equipa para confirmar
+                disponibilidade, tamanhos, entrega e compra com confiança.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Button asChild className="h-12 rounded-full bg-[#111111] px-6 text-base text-white hover:bg-[#1f1f1f]">
                   <a href={buildWhatsAppLink(defaultWhatsappMessage)} target="_blank" rel="noreferrer">
-                    Falar no WhatsApp
+                    Pedir atendimento no WhatsApp
                     <MessageCircle className="h-4 w-4" />
                   </a>
                 </Button>
@@ -598,15 +610,15 @@ function Home() {
                   variant="outline"
                   className="h-12 rounded-full border-black/10 bg-white/80 px-6 text-base text-[#111111] hover:bg-white"
                 >
-                  <Link href="/produtos">Ver catálogo</Link>
+                  <Link href="/produtos">Ver catálogo completo</Link>
                 </Button>
               </div>
 
               <div className="mt-8 flex flex-wrap gap-3">
                 {[
                   "Atendimento personalizado",
-                  "Peças selecionadas",
-                  "Compra prática no WhatsApp",
+                  "Compra via WhatsApp",
+                  "Confirmação de disponibilidade",
                 ].map((item) => (
                   <div
                     key={item}
@@ -628,7 +640,7 @@ function Home() {
                     <p className="text-xs uppercase tracking-[0.24em] text-[#8a6f31]">
                       Destaque da boutique
                     </p>
-                    <p className="mt-1 text-sm text-[#111111]">Curadoria premium semanal</p>
+                    <p className="mt-1 text-sm text-[#111111]">Selecção actualizada da semana</p>
                   </div>
                 </div>
               </div>
@@ -652,10 +664,10 @@ function Home() {
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-[0.24em] text-white/65">
-                      Sensação premium
+                      Compra com apoio
                     </p>
                     <p className="mt-1 text-sm text-white/90">
-                      Boutique elegante com compra simples e humana.
+                      Atendimento claro para escolher, confirmar e comprar sem complicações.
                     </p>
                   </div>
                 </div>
@@ -722,7 +734,7 @@ function Home() {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            WhatsApp
+                            Consultar disponibilidade
                           </a>
                         </Button>
                       </div>
@@ -794,16 +806,16 @@ function Home() {
                   Boutique com curadoria
                 </p>
                 <p className="mt-1 text-sm text-[#111111]">
-                  Peças selecionadas com intenção e elegância.
+                  Peças selecionadas com intenção e boa apresentação.
                 </p>
               </div>
             </div>
 
             <div>
-            <SectionHeading
-              eyebrow="Sobre a marca"
-              title="Uma marca pensada para mulheres que valorizam presença e bom gosto."
-            />
+              <SectionHeading
+                eyebrow="Sobre a marca"
+                title="Uma marca pensada para mulheres que querem comprar com segurança e bom gosto."
+              />
 
               <div className="mt-8 space-y-4 text-[#5d5548]">
                 <p className="leading-8">
@@ -812,12 +824,12 @@ function Home() {
                   improvisada.
                 </p>
                 <p className="leading-8">
-                  Cada bloco da homepage foi pensado para parecer boutique,
-                  transmitir confiança e conduzir naturalmente para o WhatsApp.
+                  Cada bloco da página inicial foi pensado para transmitir
+                  confiança e conduzir naturalmente para o WhatsApp.
                 </p>
                 <p className="leading-8">
-                  O resultado é uma presença online mais forte, elegante e pronta
-                  para ser mostrada com orgulho à cliente.
+                  O resultado é uma presença online mais forte, clara e pronta
+                  para ajudar a cliente a decidir com menos fricção.
                 </p>
               </div>
             </div>
@@ -827,8 +839,8 @@ function Home() {
         <section id="beneficios" className="scroll-mt-24 py-20">
           <div className="container">
             <SectionHeading
-              eyebrow="Porque escolher"
-              title="Uma boutique que comunica cuidado, confiança e estilo."
+              eyebrow="Por que escolher"
+              title="Uma boutique que comunica cuidado, confiança e apoio real na compra."
             />
 
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -855,7 +867,7 @@ function Home() {
           <div className="container">
             <SectionHeading
               eyebrow="Testemunhos"
-              title="Pequenos sinais de validação fazem a marca parecer muito mais confiável."
+              title="Pequenos sinais de validação ajudam a cliente a decidir com mais segurança."
             />
 
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -928,17 +940,17 @@ function Home() {
                 Atendimento por WhatsApp
               </Badge>
               <h2 className="mt-5 text-3xl leading-[1.05] tracking-[-0.05em] text-white md:text-5xl">
-                Pronta para falar com uma boutique que entende de presença e elegância?
+                Pronta para falar com quem te ajuda a escolher a peça certa?
               </h2>
               <p className="mt-5 text-base leading-8 text-white/85 md:text-lg">
-                A próxima ação é simples: abrir o WhatsApp e receber atenção
-                personalizada para escolher a peça certa.
+                Abre o WhatsApp e recebe atendimento personalizado para
+                confirmar disponibilidade, tamanhos e entrega.
               </p>
 
               <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
                 <Button asChild className="h-12 rounded-full bg-white px-6 text-base text-[#111111] hover:bg-white/90">
                   <a href={buildWhatsAppLink(defaultWhatsappMessage)} target="_blank" rel="noreferrer">
-                    Abrir WhatsApp
+                    Pedir atendimento no WhatsApp
                     <MessageCircle className="h-4 w-4" />
                   </a>
                 </Button>
@@ -947,7 +959,7 @@ function Home() {
                   variant="outline"
                   className="h-12 rounded-full border-white/20 bg-white/10 px-6 text-base text-white hover:bg-white/15 hover:text-white"
                 >
-                  <a href="#colecoes">Explorar coleções</a>
+                  <a href="#colecoes">Ver catálogo completo</a>
                 </Button>
               </div>
             </div>
@@ -970,9 +982,8 @@ function Home() {
                 />
               </div>
               <p className="mt-5 max-w-md text-sm leading-8 text-white/70">
-                Moda feminina selecionada com atendimento próximo, presença
-                visual refinada e foco total em uma experiência elegante pelo
-                WhatsApp.
+                Moda feminina com atendimento próximo, informação clara e foco
+                total numa experiência segura pelo WhatsApp.
               </p>
             </div>
 
@@ -1003,11 +1014,13 @@ function Home() {
                   className="flex items-center gap-3 transition hover:text-white"
                 >
                   <MessageCircle className="h-4 w-4 text-[#d4af37]" />
-                  WhatsApp
+                  WhatsApp oficial
                 </a>
+                <p>Número oficial: {whatsappDisplayNumber}</p>
+                <p>Horário de atendimento: {whatsappSupportHours}</p>
                 <p>
-                  Atendimento direto para escolher peças, pedir fotos e fechar
-                  a compra de forma simples.
+                  Entregas combinadas via WhatsApp, conforme a zona e a
+                  disponibilidade da peça.
                 </p>
               </div>
             </div>
@@ -1016,8 +1029,8 @@ function Home() {
           <Separator className="my-10 bg-white/10" />
 
           <div className="flex flex-col gap-4 text-sm text-white/55 md:flex-row md:items-center md:justify-between">
-            <p>© 2024 EC EMY COMÉRCIO. Todos os direitos reservados.</p>
-            <p>Moda feminina com curadoria, elegância e atendimento humano.</p>
+            <p>© 2026 EC EMY COMÉRCIO. Todos os direitos reservados.</p>
+            <p>Entregas combinadas, atendimento das 7h às 23h e apoio directo no WhatsApp.</p>
           </div>
         </div>
       </footer>
