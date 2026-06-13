@@ -1,14 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { buildWhatsAppLink, defaultWhatsappMessage } from "@/lib/site";
 import { ArrowLeft, MessageCircle, Search } from "lucide-react";
 import { useLocation } from "wouter";
-
-const whatsappNumber = "5585987654321";
-const homeMessage = "Olá! Vim pelo site da EC EMY COMÉRCIO.";
-
-function buildWhatsAppLink(message: string) {
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-}
 
 export default function NotFound() {
   const [, setLocation] = useLocation();
@@ -66,16 +60,16 @@ export default function NotFound() {
                     <ArrowLeft className="h-4 w-4" />
                     Voltar à homepage
                   </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="h-12 rounded-full border-black/10 bg-white px-6 text-base text-[#111111] hover:bg-[#fbf8f2]"
-                  >
-                    <a href={buildWhatsAppLink(homeMessage)} target="_blank" rel="noreferrer">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="h-12 rounded-full border-black/10 bg-white px-6 text-base text-[#111111] hover:bg-[#fbf8f2]"
+                >
+                    <a href={buildWhatsAppLink(defaultWhatsappMessage)} target="_blank" rel="noreferrer">
                       <MessageCircle className="h-4 w-4" />
                       Falar no WhatsApp
                     </a>
-                  </Button>
+                </Button>
                 </div>
               </div>
             </CardContent>

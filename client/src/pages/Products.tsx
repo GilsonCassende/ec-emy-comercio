@@ -3,7 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { buildWhatsAppLink, defaultWhatsappMessage } from "@/lib/site";
+import {
+  buildProductWhatsAppLink,
+  buildWhatsAppLink,
+  defaultWhatsappMessage,
+} from "@/lib/site";
 import { useSeo } from "@/hooks/useSeo";
 import {
   ArrowRight,
@@ -18,12 +22,6 @@ import { useMemo, useState } from "react";
 import { Link } from "wouter";
 import { catalogProducts, productCategories, type CatalogProduct, type ProductCategory } from "@/data/products";
 import type { ProductFilterCategory } from "@/data/products";
-
-const productPageMessage = "Olá! Vim pelo catálogo da EC EMY COMÉRCIO e gostaria de saber mais sobre as peças.";
-
-function getWhatsAppMessage(product: CatalogProduct) {
-  return `Olá, tenho interesse neste produto:\n${product.name}\n\nGostaria de receber mais informações.`;
-}
 
 function useCatalogGroups(items: CatalogProduct[]) {
   return useMemo(() => {
@@ -83,7 +81,7 @@ function ProductCard({ product }: { product: CatalogProduct }) {
         <div className="mt-5 flex items-center gap-3">
           <Button asChild className="h-11 flex-1 rounded-full bg-[#111111] px-5 text-sm text-white hover:bg-[#1f1f1f]">
             <a
-              href={buildWhatsAppLink(getWhatsAppMessage(product))}
+              href={buildProductWhatsAppLink(product.name)}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap"
@@ -116,7 +114,7 @@ function CatalogHero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button asChild className="h-12 rounded-full bg-white px-6 text-base text-[#111111] hover:bg-white/90">
-              <a href={buildWhatsAppLink(productPageMessage)} target="_blank" rel="noreferrer">
+              <a href={buildWhatsAppLink(defaultWhatsappMessage)} target="_blank" rel="noreferrer">
                 Falar no WhatsApp
                 <MessageCircle className="h-4 w-4" />
               </a>

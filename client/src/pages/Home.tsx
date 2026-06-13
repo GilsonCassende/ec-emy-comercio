@@ -29,6 +29,11 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { useEffect, useState } from "react";
+import {
+  buildProductWhatsAppLink,
+  buildWhatsAppLink,
+  defaultWhatsappMessage,
+} from "@/lib/site";
 
 type Collection = {
   title: string;
@@ -59,9 +64,6 @@ type FaqItem = {
   answer: string;
 };
 
-const whatsappNumber = "5585987654321";
-const defaultWhatsappMessage =
-  "Olá! Vim pelo site da EC EMY COMÉRCIO e gostaria de conhecer as peças em destaque.";
 const logoImage = "/brand/ec-emy-logo.webp";
 const heroImage = "/products/20-vestido-verde-modelo.webp";
 const heroAccentImage = "/products/31-vestido-branco-manequins.webp";
@@ -271,10 +273,6 @@ const faqItems: FaqItem[] = [
   },
 ];
 
-function buildWhatsAppLink(message: string) {
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-}
-
 function SectionHeading({
   eyebrow,
   title,
@@ -383,7 +381,7 @@ function ProductCard({
             className="h-11 w-full shrink-0 rounded-full bg-[#111111] px-5 text-sm font-semibold tracking-[-0.01em] text-white shadow-[0_12px_28px_rgba(17,17,17,0.16)] transition hover:-translate-y-0.5 hover:bg-[#1f1f1f] lg:min-w-[11.5rem] lg:w-auto lg:self-end"
           >
             <a
-              href={buildWhatsAppLink(`Olá! Gostaria de saber mais sobre: ${product.title}.`)}
+              href={buildProductWhatsAppLink(product.title)}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap"
@@ -708,7 +706,7 @@ function Home() {
                           className="h-10 rounded-full bg-white px-4 text-sm text-[#111111] hover:bg-white/90"
                         >
                           <a
-                            href={buildWhatsAppLink(`Olá! Gostaria de ver a coleção ${collection.title} da EC EMY COMÉRCIO.`)}
+                            href={buildWhatsAppLink(defaultWhatsappMessage)}
                             target="_blank"
                             rel="noreferrer"
                           >
