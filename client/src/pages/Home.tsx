@@ -388,7 +388,7 @@ function ProductCard({
           Código: {productCode}
         </p>
         <p className="mt-3 text-sm leading-7 text-[#5d5548]">{product.description}</p>
-        <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between lg:gap-6">
+        <div className="mt-5 flex flex-col gap-4">
           <div className="min-w-0">
             <p className="text-xs uppercase tracking-[0.22em] text-[#8a6f31]">
               Investimento
@@ -398,7 +398,7 @@ function ProductCard({
           <Button
             asChild
             size="sm"
-            className="h-11 w-full shrink-0 rounded-full bg-[#111111] px-5 text-sm font-semibold tracking-[-0.01em] text-white shadow-[0_12px_28px_rgba(17,17,17,0.16)] transition hover:-translate-y-0.5 hover:bg-[#1f1f1f] lg:min-w-[11.5rem] lg:w-auto lg:self-end"
+            className="h-11 w-full rounded-full bg-[#111111] px-5 text-sm font-semibold tracking-[-0.01em] text-white shadow-[0_12px_28px_rgba(17,17,17,0.16)] transition hover:-translate-y-0.5 hover:bg-[#1f1f1f]"
           >
             <a
               href={buildProductWhatsAppLink({
