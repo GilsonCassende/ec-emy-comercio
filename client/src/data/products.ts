@@ -113,13 +113,13 @@ export const catalogProducts: CatalogProduct[] = [
   {
     id: 8,
     code: "EC008",
-    name: "Vestidos premium femininos",
+    name: "Camisa premium feminina",
     category: "Blusas",
     subcategory: "Variados",
     image: "/products/08-vestidos-mix-premium.webp",
     badge: "Mais procurado",
     focus: "center 34%",
-    whatsappLabel: "Vestidos premium femininos",
+    whatsappLabel: "Camisa premium feminina",
   },
   {
     id: 9,
