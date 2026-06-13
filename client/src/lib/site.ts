@@ -12,17 +12,32 @@ export function buildWhatsAppLink(message: string) {
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
-export function buildProductWhatsAppMessage(productName: string) {
+type ProductWhatsAppMessageInput = {
+  productName: string;
+  productCode: string;
+  category: string;
+};
+
+export function buildProductWhatsAppMessage({
+  productName,
+  productCode,
+  category,
+}: ProductWhatsAppMessageInput) {
   return `Olá, tudo bem?
 
 Tenho interesse no seguinte produto da EC EMY COMÉRCIO:
 
-• Produto: ${productName}
+🛍️ Produto: ${productName}
+
+🏷️ Código: ${productCode}
+
+📂 Categoria: ${category}
 
 Gostaria de receber informações sobre:
 
 • Disponibilidade
-• Tamanhos
+• Tamanhos disponíveis
+• Cores disponíveis
 • Preço
 
 Aguardo o seu atendimento.
@@ -30,6 +45,6 @@ Aguardo o seu atendimento.
 Muito obrigado(a).`;
 }
 
-export function buildProductWhatsAppLink(productName: string) {
-  return buildWhatsAppLink(buildProductWhatsAppMessage(productName));
+export function buildProductWhatsAppLink(input: ProductWhatsAppMessageInput) {
+  return buildWhatsAppLink(buildProductWhatsAppMessage(input));
 }

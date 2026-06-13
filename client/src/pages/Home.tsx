@@ -34,6 +34,7 @@ import {
   buildWhatsAppLink,
   defaultWhatsappMessage,
 } from "@/lib/site";
+import { catalogProducts } from "@/data/products";
 
 type Collection = {
   title: string;
@@ -336,6 +337,7 @@ function ProductCard({
   variant?: "default" | "highlight";
 }) {
   const isHighlight = variant === "highlight";
+  const catalogProduct = catalogProducts.find((item) => item.name === product.title);
 
   return (
     <Card
@@ -381,7 +383,11 @@ function ProductCard({
             className="h-11 w-full shrink-0 rounded-full bg-[#111111] px-5 text-sm font-semibold tracking-[-0.01em] text-white shadow-[0_12px_28px_rgba(17,17,17,0.16)] transition hover:-translate-y-0.5 hover:bg-[#1f1f1f] lg:min-w-[11.5rem] lg:w-auto lg:self-end"
           >
             <a
-              href={buildProductWhatsAppLink(product.title)}
+              href={buildProductWhatsAppLink({
+                productName: product.title,
+                productCode: catalogProduct?.code ?? "N/A",
+                category: product.category,
+              })}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap"

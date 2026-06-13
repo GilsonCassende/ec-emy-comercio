@@ -81,7 +81,11 @@ function ProductCard({ product }: { product: CatalogProduct }) {
         <div className="mt-5 flex items-center gap-3">
           <Button asChild className="h-11 flex-1 rounded-full bg-[#111111] px-5 text-sm text-white hover:bg-[#1f1f1f]">
             <a
-              href={buildProductWhatsAppLink(product.name)}
+              href={buildProductWhatsAppLink({
+                productName: product.name,
+                productCode: product.code,
+                category: product.category,
+              })}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap"

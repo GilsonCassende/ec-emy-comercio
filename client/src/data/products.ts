@@ -15,6 +15,7 @@ export type ProductFilterCategory = ProductCategory | "Todos";
 
 export type CatalogProduct = {
   id: number;
+  code: string;
   name: string;
   category: ProductCategory;
   image: string;
@@ -38,7 +39,23 @@ export const productCategories: ProductFilterCategory[] = [
   "Outros",
 ];
 
-export const catalogProducts: CatalogProduct[] = [
+const productCodePrefixes: Record<ProductCategory, string> = {
+  Vestidos: "VST",
+  Conjuntos: "CON",
+  Blusas: "BLS",
+  Calças: "CAL",
+  Saias: "SAI",
+  Bolsas: "BOL",
+  Sapatos: "SAP",
+  Sandálias: "SAN",
+  Acessórios: "ACE",
+  Beleza: "BEL",
+  Outros: "OUT",
+};
+
+type CatalogProductWithoutCode = Omit<CatalogProduct, "code">;
+
+const rawCatalogProducts: CatalogProductWithoutCode[] = [
   {
     id: 1,
     name: "Conjunto off-white",
@@ -337,3 +354,15 @@ export const catalogProducts: CatalogProduct[] = [
     whatsappLabel: "Pulseira bijuteria dourada",
   },
 ];
+
+const categoryCounters = new Map<ProductCategory, number>();
+
+export const catalogProducts: CatalogProduct[] = rawCatalogProducts.map((product) => {
+  const nextIndex = (categoryCounters.get(product.category) ?? 0) + 1;
+  categoryCounters.set(product.category, nextIndex);
+
+  return {
+    ...product,
+    code: `${productCodePrefixes[product.category]}-${String(nextIndex).padStart(3, "0")}`,
+  };
+});
