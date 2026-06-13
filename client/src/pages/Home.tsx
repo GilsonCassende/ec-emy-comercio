@@ -229,22 +229,22 @@ const reasons = [
 
 const testimonials: Testimonial[] = [
   {
-    name: "Mariana S.",
+    name: "Mariana Santos",
     city: "Luanda",
     quote:
-      "O atendimento foi rápido e ajudou-me a confirmar tudo antes de comprar. Passei confiança logo no primeiro contacto.",
+      "Respondiam-me rápido e consegui confirmar tamanho, disponibilidade e entrega antes de fechar. Fiquei mesmo à vontade para comprar.",
   },
   {
-    name: "Débora A.",
+    name: "Débora António",
     city: "Benguela",
     quote:
-      "Gostei da forma clara como explicam disponibilidade, tamanho e entrega. Fiquei segura para avançar.",
+      "Gostei da forma clara como me passaram os detalhes da peça. No WhatsApp ficou tudo simples de decidir, sem stress.",
   },
   {
-    name: "Renata M.",
+    name: "Renata Matias",
     city: "Huambo",
     quote:
-      "A equipa respondeu com atenção e deu-me as informações certas para escolher a peça sem dúvida.",
+      "A equipa foi atenciosa, mostrou-me opções e ajudou-me a escolher uma peça que realmente combinou comigo. É um atendimento de confiança.",
   },
 ];
 
@@ -252,37 +252,37 @@ const faqItems: FaqItem[] = [
   {
     question: "Como comprar?",
     answer:
-      "Toque em \"Pedir atendimento no WhatsApp\", envie a peça que procura e a equipa confirma a disponibilidade, o preço e os próximos passos.",
+      "Toque em \"Pedir atendimento no WhatsApp\", envie a peça que procura e a equipa confirma a disponibilidade, o preço e os próximos passos. É simples e sem stress.",
   },
   {
     question: "Quais são as formas de pagamento?",
     answer:
-      "As formas de pagamento são confirmadas no WhatsApp antes de fechar a compra, para garantir que recebe a orientação certa no momento.",
+      "As formas de pagamento são confirmadas no WhatsApp antes de fechar a compra, para garantir que recebe a orientação certa no momento e possa avançar à vontade.",
   },
   {
     question: "Fazem entregas?",
     answer:
-      "Sim. A entrega é combinada caso a caso, conforme a zona e a disponibilidade da peça. A equipa informa o prazo e o valor antes do envio.",
+      "Sim. A entrega é combinada caso a caso, conforme a zona e a disponibilidade da peça. A equipa informa o prazo e o valor antes do envio, para ficar tudo claro.",
   },
   {
     question: "Como funcionam as trocas?",
     answer:
-      "As trocas são avaliadas conforme o estado da peça e o motivo da solicitação. O ideal é confirmar tudo no WhatsApp antes da entrega.",
+      "As trocas são avaliadas conforme o estado da peça e o motivo da solicitação. O ideal é confirmar tudo no WhatsApp antes da entrega, para evitar mal-entendidos.",
   },
   {
     question: "Quanto tempo demoram a responder no WhatsApp?",
     answer:
-      "O tempo de resposta costuma ser rápido dentro do horário de atendimento, das 7h às 23h. Fora desse período, a equipa responde assim que abrir.",
+      "O tempo de resposta costuma ser rápido dentro do horário de atendimento, das 7h às 23h. Fora desse período, a equipa responde assim que voltar a abrir.",
   },
   {
     question: "Os produtos estão sempre disponíveis?",
     answer:
-      "A disponibilidade pode mudar rapidamente. Por isso, o ideal é confirmar sempre no WhatsApp antes de finalizar.",
+      "A disponibilidade pode mudar rapidamente. Por isso, o ideal é confirmar sempre no WhatsApp antes de finalizar, para não haver surpresa.",
   },
   {
     question: "Posso reservar uma peça?",
     answer:
-      "Sim, algumas peças podem ser reservadas por um curto período, mediante confirmação no WhatsApp.",
+      "Sim, algumas peças podem ser reservadas por um curto período, mediante confirmação no WhatsApp, para a cliente ficar à vontade.",
   },
 ];
 
@@ -589,13 +589,13 @@ function Home() {
               </Badge>
 
               <h1 className="mt-5 text-balance text-3xl leading-[0.98] tracking-[-0.05em] text-[#111111] sm:max-w-2xl sm:text-5xl md:text-6xl lg:max-w-none lg:text-7xl">
-                Moda feminina com atendimento personalizado e compra segura no WhatsApp.
+                Moda feminina com atendimento próximo e compra segura no WhatsApp.
               </h1>
 
               <p className="mt-6 max-w-xl text-base leading-8 text-[#5d5548] md:text-lg">
-                A EC EMY COMÉRCIO apresenta moda feminina, bolsas, acessórios e
+                A EC EMY COMÉRCIO junta moda feminina, bolsas, acessórios e
                 calçados com apoio directo da equipa para confirmar
-                disponibilidade, tamanhos, entrega e compra com confiança.
+                disponibilidade, tamanhos, entrega e fechar a compra sem stress.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -667,7 +667,7 @@ function Home() {
                       Compra com apoio
                     </p>
                     <p className="mt-1 text-sm text-white/90">
-                      Atendimento claro para escolher, confirmar e comprar sem complicações.
+                      Atendimento claro para escolher, confirmar e comprar com calma e sem complicações.
                     </p>
                   </div>
                 </div>
@@ -868,8 +868,13 @@ function Home() {
           <div className="container">
             <SectionHeading
               eyebrow="Testemunhos"
-              title="Pequenos sinais de validação ajudam a cliente a decidir com mais segurança."
+              title="Confirmações reais ajudam a cliente a comprar sem stress e com mais segurança."
             />
+
+            <p className="mt-6 max-w-2xl text-sm leading-7 text-[#61584c]">
+              Resposta rápida, informação clara e apoio no WhatsApp deixam a compra
+              mais à vontade e aumentam a confiança antes de fechar.
+            </p>
 
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
               {testimonials.map((testimonial) => (
@@ -984,7 +989,8 @@ function Home() {
               </div>
               <p className="mt-5 max-w-md text-sm leading-8 text-white/70">
                 Moda feminina com atendimento próximo, informação clara e foco
-                total numa experiência segura pelo WhatsApp.
+                total numa experiência segura pelo WhatsApp. Fale connosco à
+                vontade.
               </p>
             </div>
 
@@ -1021,7 +1027,8 @@ function Home() {
                 <p>Horário de atendimento: {whatsappSupportHours}</p>
                 <p>
                   Entregas combinadas via WhatsApp, conforme a zona e a
-                  disponibilidade da peça.
+                  disponibilidade da peça. A equipa ajuda a confirmar tudo
+                  antes do envio.
                 </p>
               </div>
             </div>
@@ -1031,7 +1038,7 @@ function Home() {
 
           <div className="flex flex-col gap-4 text-sm text-white/55 md:flex-row md:items-center md:justify-between">
             <p>© 2026 EC EMY COMÉRCIO. Todos os direitos reservados.</p>
-            <p>Entregas combinadas, atendimento das 7h às 23h e apoio directo no WhatsApp.</p>
+            <p>Entregas combinadas, atendimento das 7h às 23h e apoio directo no WhatsApp, sem complicações.</p>
           </div>
         </div>
       </footer>

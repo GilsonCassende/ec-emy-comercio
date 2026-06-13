@@ -79,7 +79,7 @@ function ProductCard({ product }: { product: CatalogProduct }) {
           Código: {product.code}
         </p>
         <p className="mt-3 text-sm leading-7 text-[#61584c]">
-          Curadoria pensada para uma boutique feminina com peças fáceis de confirmar e comprar pelo WhatsApp.
+          Peças escolhidas para a cliente confirmar tudo no WhatsApp e comprar sem stress.
         </p>
         <div className="mt-2 flex flex-col gap-4">
           <div className="min-w-0">
@@ -119,10 +119,10 @@ function CatalogHero() {
             Catálogo completo
           </Badge>
           <h1 className="mt-5 text-balance text-4xl leading-[0.95] tracking-[-0.06em] sm:text-5xl md:text-6xl">
-            Peças prontas para consultar no WhatsApp.
+            Peças prontas para confirmar no WhatsApp.
           </h1>
           <p className="mt-5 max-w-xl text-base leading-8 text-white/80 md:text-lg">
-            Descubra peças femininas, confirme disponibilidade e fale com a equipa no WhatsApp para fechar a compra com segurança.
+            Veja as peças femininas, confirme disponibilidade e fale com a equipa no WhatsApp para fechar a compra à vontade.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -365,7 +365,7 @@ export default function Products() {
                 <CardContent className="p-8 md:p-10">
                   <h2 className="text-2xl tracking-[-0.04em] text-[#111111]">Nenhum produto encontrado</h2>
                   <p className="mt-3 max-w-2xl text-sm leading-7 text-[#61584c]">
-                    Ajusta a pesquisa ou volta para uma categoria mais ampla para encontrar peças relacionadas.
+                    Ajusta a pesquisa ou escolhe uma categoria mais ampla para encontrares peças parecidas.
                   </p>
                   <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                     <Button onClick={() => setSearch("")} className="h-11 rounded-full bg-[#111111] px-5 text-white hover:bg-[#1f1f1f]">
