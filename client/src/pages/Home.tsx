@@ -369,6 +369,9 @@ function ProductCard({
       </div>
       <CardContent className="p-6">
         <h3 className="text-xl tracking-[-0.04em] text-[#111111]">{product.title}</h3>
+        <p className="mt-2 inline-flex rounded-full border border-[#d4af37]/18 bg-[#fbf8f2] px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-[#8a6f31]">
+          Código: {catalogProduct?.code ?? "N/A"}
+        </p>
         <p className="mt-3 text-sm leading-7 text-[#5d5548]">{product.description}</p>
         <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between lg:gap-6">
           <div className="min-w-0">

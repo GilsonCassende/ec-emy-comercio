@@ -75,6 +75,9 @@ function ProductCard({ product }: { product: CatalogProduct }) {
 
       <CardContent className="p-5">
         <h3 className="text-xl tracking-[-0.04em] text-[#111111]">{product.name}</h3>
+        <p className="mt-2 inline-flex rounded-full border border-[#d4af37]/18 bg-[#fbf8f2] px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-[#8a6f31]">
+          Código: {product.code}
+        </p>
         <p className="mt-3 text-sm leading-7 text-[#61584c]">
           Curadoria pensada para uma boutique feminina com leitura elegante, pronta para compra pelo WhatsApp.
         </p>
