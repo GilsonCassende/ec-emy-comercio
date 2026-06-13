@@ -18,7 +18,7 @@ import {
   Store,
   Tag,
 } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 import { catalogProducts, productCategories, type CatalogProduct, type ProductCategory } from "@/data/products";
 import type { ProductFilterCategory } from "@/data/products";
@@ -206,6 +206,10 @@ function CatalogHero() {
 export default function Products() {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState<ProductFilterCategory>("Todos");
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, []);
 
   useSeo({
     title: "Produtos | EC EMY COMÉRCIO",
