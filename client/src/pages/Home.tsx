@@ -382,13 +382,13 @@ function ProductCard({
           </div>
         </div>
       </div>
-      <CardContent className="p-6">
+      <CardContent className="flex h-full flex-1 flex-col p-6">
         <h3 className="text-xl tracking-[-0.04em] text-[#111111]">{productName}</h3>
         <p className="mt-2 inline-flex rounded-full border border-[#d4af37]/18 bg-[#fbf8f2] px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-[#8a6f31]">
           Código: {productCode}
         </p>
-        <p className="mt-3 text-sm leading-7 text-[#5d5548]">{product.description}</p>
-        <div className="mt-5 flex flex-col gap-4">
+        <p className="mt-3 flex-1 text-sm leading-7 text-[#5d5548]">{product.description}</p>
+        <div className="mt-5">
           <div className="min-w-0">
             <p className="text-xs uppercase tracking-[0.22em] text-[#8a6f31]">
               Investimento
@@ -720,19 +720,20 @@ function Home() {
                       <h3 className="mt-4 text-2xl tracking-[-0.04em] text-white">
                         {collection.title}
                       </h3>
-                      <div className="mt-4 flex items-center justify-between gap-3">
+                      <div className="mt-4 flex flex-col gap-3">
                         <span className="text-[11px] uppercase tracking-[0.22em] text-white/65">
                           Ver seleção
                         </span>
                         <Button
                           asChild
                           size="sm"
-                          className="h-10 rounded-full bg-white px-4 text-sm text-[#111111] hover:bg-white/90"
+                          className="h-10 w-full rounded-full bg-white px-4 text-sm text-[#111111] hover:bg-white/90"
                         >
                           <a
                             href={buildWhatsAppLink(defaultWhatsappMessage)}
                             target="_blank"
                             rel="noreferrer"
+                            className="inline-flex items-center justify-center whitespace-nowrap"
                           >
                             Ver disponibilidade
                           </a>

@@ -73,16 +73,16 @@ function ProductCard({ product }: { product: CatalogProduct }) {
         </div>
       </div>
 
-      <CardContent className="p-5">
+      <CardContent className="flex h-full flex-1 flex-col p-5">
         <h3 className="text-xl tracking-[-0.04em] text-[#111111]">{product.name}</h3>
         <p className="mt-2 inline-flex rounded-full border border-[#d4af37]/18 bg-[#fbf8f2] px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-[#8a6f31]">
           Código: {product.code}
         </p>
-        <p className="mt-3 text-sm leading-7 text-[#61584c]">
+        <p className="mt-3 flex-1 text-sm leading-7 text-[#61584c]">
           Curadoria pensada para uma boutique feminina com peças fáceis de confirmar e comprar pelo WhatsApp.
         </p>
-        <div className="mt-5 flex items-center gap-3">
-          <Button asChild className="h-11 flex-1 rounded-full bg-[#111111] px-5 text-sm text-white hover:bg-[#1f1f1f]">
+        <div className="mt-5">
+          <Button asChild className="h-11 w-full rounded-full bg-[#111111] px-5 text-sm text-white hover:bg-[#1f1f1f]">
             <a
               href={buildProductWhatsAppLink({
                 productName: product.name,
