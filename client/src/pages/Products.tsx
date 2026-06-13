@@ -81,7 +81,7 @@ function ProductCard({ product }: { product: CatalogProduct }) {
         <p className="mt-3 text-sm leading-7 text-[#61584c]">
           Curadoria pensada para uma boutique feminina com peças fáceis de confirmar e comprar pelo WhatsApp.
         </p>
-        <div className="mt-4 flex flex-col gap-3">
+        <div className="mt-2 flex flex-col gap-4">
           <div className="min-w-0">
             <p className="text-xs uppercase tracking-[0.22em] text-[#8a6f31]">
               Investimento

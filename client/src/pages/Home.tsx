@@ -388,7 +388,7 @@ function ProductCard({
           Código: {productCode}
         </p>
         <p className="mt-3 flex-1 text-sm leading-7 text-[#5d5548]">{product.description}</p>
-        <div className="mt-8">
+        <div className="mt-2 flex flex-col gap-4">
           <div className="min-w-0">
             <p className="text-xs uppercase tracking-[0.22em] text-[#8a6f31]">
               Investimento
