@@ -139,31 +139,31 @@ const collections: Collection[] = [
 
 const weeklyHighlights: Product[] = [
   {
-    title: "Conjunto branco e vermelho",
+    title: "Conjunto alfaiataria bege",
     category: "Conjuntos",
-    description: "Uma composição forte, luminosa e com leitura comercial imediata.",
+    description: "Uma composição elegante e refinada, ideal para uma imagem boutique.",
     badge: "Destaque da semana",
     price: "Sob consulta",
-    image: "/products/15-conjunto-branco-vermelho.webp",
-    imagePosition: "center 40%",
+    image: "/products/13-conjunto-bege-alfaiataria-2.webp",
+    imagePosition: "center 34%",
   },
   {
-    title: "Vestido verde",
+    title: "Vestido verde elegante",
     category: "Vestidos",
-    description: "A peça com mais presença editorial e melhor leitura de boutique.",
+    description: "Uma peça clássica com presença sofisticada e leitura premium.",
     badge: "Mais procurado",
     price: "Sob consulta",
     image: "/products/26-vestido-verde-elite.webp",
     imagePosition: "center 36%",
   },
   {
-    title: "Camisa vinho",
-    category: "Blusas",
-    description: "Peça listrada com presença visual forte e leitura comercial imediata.",
-    badge: "Mais chamativo",
+    title: "Vestido branco elegante",
+    category: "Vestidos",
+    description: "Visual limpo, delicado e muito elegante para a homepage.",
+    badge: "Mais elegante",
     price: "Sob consulta",
-    image: "/products/08-vestidos-mix-premium.webp",
-    imagePosition: "center 38%",
+    image: "/products/31-vestido-curto-transpassado.webp",
+    imagePosition: "center 34%",
   },
 ];
 
