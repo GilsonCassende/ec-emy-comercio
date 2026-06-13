@@ -388,7 +388,7 @@ function ProductCard({
           Código: {productCode}
         </p>
         <p className="mt-3 flex-1 text-sm leading-7 text-[#5d5548]">{product.description}</p>
-        <div className="mt-5">
+        <div className="mt-8">
           <div className="min-w-0">
             <p className="text-xs uppercase tracking-[0.22em] text-[#8a6f31]">
               Investimento
@@ -720,7 +720,7 @@ function Home() {
                       <h3 className="mt-4 text-2xl tracking-[-0.04em] text-white">
                         {collection.title}
                       </h3>
-                      <div className="mt-4 flex flex-col gap-3">
+                      <div className="mt-6 flex flex-col gap-3">
                         <span className="text-[11px] uppercase tracking-[0.22em] text-white/65">
                           Ver seleção
                         </span>
